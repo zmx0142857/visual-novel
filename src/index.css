@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 32px;
+}
+#root {
+  position: relative;
+  height: 100%;
+}
+.g-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

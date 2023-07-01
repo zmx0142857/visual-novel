@@ -1,0 +1,82 @@
+.dialog {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  z-index: 0;
+  box-shadow: 0 -1px 10px #aaa;
+  border-top: 1px solid #bbb;
+}
+.dialog-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/test-texture.png);
+  background-repeat: repeat;
+  background-color:rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
+  z-index: -1;
+}
+.dialog-left {
+  padding: .8rem;
+}
+.dialog-avatar {
+  height: 6rem;
+  width: 6rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 0 4px #aaa;
+  border: 1px solid #bbb;
+}
+.dialog-right {
+  padding: .8rem;
+  color: #fff;
+  font-size: 1.5rem;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+.dialog-text {
+  flex: auto;
+}
+.dialog-text::after {
+  display: inline-block; /* display block 或 inline-block 动画才能生效 */
+  content: ' \25b6';
+  font-family: 'Dejavu Serif', serif, sans-serif;
+  animation: shake 0.5s infinite;
+  --transform: translateX(4px);
+}
+.dialog-text.dialog-text--finished::after {
+  content: ' \25bc';
+  --transform: translateY(4px);
+}
+@keyframes shake {
+  0% { transform: none }
+  50% { transform: var(--transform) }
+  100% { transform: none }
+}
+.dialog-btn-group {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4px;
+}
+
+.dialog-btn {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: .9rem;
+  color: #f8f8f8;
+  background-color: #444;
+  border: 1px solid #888;
+  transition: background-color .2s, border-color .2s;
+}
+.dialog-btn--active,
+.dialog-btn:hover {
+  background-color: #666;
+  border-color: #bbb;
+}
