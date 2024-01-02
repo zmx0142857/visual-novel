@@ -8,6 +8,8 @@ body {
   position: relative;
   height: 100%;
 }
+
+/* 全局样式以 g- 开头 */
 .g-image {
   object-fit: cover;
   height: 100%;

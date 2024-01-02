@@ -14,7 +14,7 @@ const Dialog: Component = () => {
         <div class="dialog-name">秋</div>
         <div class="dialog-text dialog-text--finished">我不知道哦……但如果是和 fran 一起的话？</div>
         <div class="dialog-btn-group">
-          <button class="dialog-btn btn--active"><u>A</u>uto</button>
+          <button class="dialog-btn dialog-btn--active"><u>A</u>uto</button>
           <button class="dialog-btn"><u>O</u>ptions</button>
           <button class="dialog-btn"><u>S</u>ave</button>
           <button class="dialog-btn"><u>L</u>oad</button>
